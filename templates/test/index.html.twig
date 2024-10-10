@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TestController!{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div class="example-wrapper">
+		Hello
+		{{ name }}!
+
+		{% for i in range(1, 10) %}
+			{{ i }}
+		{% endfor %}
+
+		{{ 'foo'|capitalize|reverse }}
+		{# "Oof" #}
+
+		{% set somePrice = 10.7567 %}
+
+		{{ somePrice|price(2) }}
+		{# "10.75€" #}
+
+		{{ lipsum()|raw }}
+
+		<div class="alert alert-primary" role="alert">
+			Message d'alerte principal
+		</div>
+		<div class="alert alert-success" role="alert">
+			Message de succès
+		</div>
+		<div class="alert alert-danger" role="alert">
+			Message d'erreur
+		</div>
+		<div class="alert alert-warning" role="alert">
+			Message d'avertissement
+		</div>
+	</div>
+{% endblock %}
