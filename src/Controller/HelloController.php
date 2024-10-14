@@ -9,18 +9,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class HelloController extends AbstractController
 {
     /**
-     * @Route("/", name="index")
-     */
-    public function index(): JsonResponse
-    {
-        dd('Welcome to Mainccscscs!');
-    }
-
-    /**
-     * @Route("/hello", name="hello")
+     * @Route("/halo", name="halo")
      */
     public function hello(): JsonResponse
     {
-        dd('Welcome to your new controller!');
+        dd('Hello PHP Symfony 5 🐘');
     }
 }

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire
+{% endblock %}
+
+{% block body %}
+
+	<div class="container">
+            <div class="row">
+                {{ form_start(form, {
+                    'attr': {
+                        'novalidate': 'novalidate',
+                        'class': 'col-lg-5' 
+                        }
+                    })
+                }}
+
+                    {{ form_row(form.title) }}
+                    {{ form_row(form.content) }}
+                    {{ form_row(form.author) }}
+
+                    <button type="submit" class="btn btn-primary">Créer</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+
+
+{% endblock %}
